@@ -1,12 +1,16 @@
 import express from "express";
-const app = express();
+import cors from "cors";
 
-// Your routes here
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Test Route
 app.get("/", (req, res) => {
   res.send("Lucix API is running 🚀");
 });
 
-// ✅ Required for Render (IMPORTANT)
+// Render port requirement
 const port = process.env.PORT || 3000;
 
 app.listen(port, "0.0.0.0", () => {
