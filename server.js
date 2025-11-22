@@ -6,11 +6,9 @@ app.get("/", (req, res) => {
   res.send("Lucix API is running 🚀");
 });
 
-// ✅ Required for Render
+// ✅ Required for Render (IMPORTANT)
 const port = process.env.PORT || 3000;
 
 app.listen(port, "0.0.0.0", () => {
   console.log(`Lucix API running on port ${port}`);
 });
-
-
